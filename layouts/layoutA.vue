@@ -1,9 +1,6 @@
 <script setup lang='ts'>
 import { ref, reactive, onMounted } from 'vue';
 
-definePageMeta({
-    layout: 'layout-a'
-})
 const data = reactive({})
 onMounted(() => {
 
@@ -12,8 +9,8 @@ onMounted(() => {
 
 <template>
     <div>
-        11
-        <nuxt-link to="/test">去test页</nuxt-link>
+        layoutA
+        <slot />
     </div>
 </template>
 

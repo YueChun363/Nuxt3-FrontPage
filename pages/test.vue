@@ -2,7 +2,7 @@
 import { ref, reactive, onMounted } from 'vue';
 
 definePageMeta({
-    layout: 'layout-a'
+    layout: 'layout-b',
 })
 const data = reactive({})
 onMounted(() => {
@@ -12,8 +12,8 @@ onMounted(() => {
 
 <template>
     <div>
-        11
-        <nuxt-link to="/test">去test页</nuxt-link>
+        333
+        <nuxt-link to="/">去首页</nuxt-link>
     </div>
 </template>
 
