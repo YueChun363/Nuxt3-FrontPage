@@ -5,7 +5,7 @@ module.exports = {
             name: 'NuxtAppName',
             port: '3001',
             exec_mode: 'cluster',
-            instances: 'max',
+            instances: '1',
             script: './.output/server/index.mjs',
         }
     ]
