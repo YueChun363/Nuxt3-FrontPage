@@ -13,6 +13,9 @@ onMounted(() => {
     <div>
         333
         <nuxt-link to="/">
+            <el-icon>
+                <el-icon-home-filled></el-icon-home-filled>
+            </el-icon>
             <el-button round>
                 去首页
             </el-button>
