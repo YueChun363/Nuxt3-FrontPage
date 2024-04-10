@@ -4,6 +4,6 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "out-in" },
     layoutTransition: { name: "layout", mode: "out-in" },
   },
-  modules: ["@pinia/nuxt"],
+  modules: ["@pinia/nuxt","@element-plus/nuxt"],
   devtools: { enabled: true },
 });

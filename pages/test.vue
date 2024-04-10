@@ -12,7 +12,11 @@ onMounted(() => {
 <template>
     <div>
         333
-        <nuxt-link to="/">去首页</nuxt-link>
+        <nuxt-link to="/">
+            <el-button round>
+                去首页
+            </el-button>
+        </nuxt-link>
     </div>
 </template>
 
