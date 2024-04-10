@@ -1,5 +1,4 @@
 <script setup lang='ts'>
-import { ref, reactive, onMounted } from 'vue';
 
 definePageMeta({
     layout: 'layout-a'
