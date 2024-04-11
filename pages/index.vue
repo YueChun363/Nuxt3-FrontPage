@@ -19,13 +19,18 @@ onMounted(() => {
 
 <template>
     <div>
-        11
-        <p>请求api数据结果：{{ message }}</p>
-        <nuxt-link to="/test">
-            <el-button>
-                去test页
-            </el-button>
-        </nuxt-link>
+        <div>
+            11
+            <p>请求api数据结果：{{ message }}</p>
+            <nuxt-link to="/test">
+                <el-button>
+                    去test页
+                </el-button>
+            </nuxt-link>
+        </div>
+        <div>
+            
+        </div>
     </div>
 </template>
 
