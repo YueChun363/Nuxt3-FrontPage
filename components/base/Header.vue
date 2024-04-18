@@ -8,8 +8,8 @@ onMounted(() => {
 </script>
 
 <template>
-    <div>
-        <div class="flex items-center justify-between px-1 py-2 max-w-7xl mx-auto md:px-6">
+    <div class="sticky top-0 bg-white">
+        <div class="flex items-center justify-between px-2 py-2 max-w-7xl mx-auto md:px-6">
             <p class="flex gap-2">
                 <strong class="text-xl text-[#18181B]">YC's Blog</strong>
                 <el-tag type="primary" color="#eef2ff">Landing</el-tag>
