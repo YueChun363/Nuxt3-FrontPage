@@ -8,8 +8,7 @@ onMounted(() => {
 
 <template>
     <div>
-        layoutA
-        <slot />
+        I'm footer!
     </div>
 </template>
 

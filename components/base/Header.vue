@@ -1,16 +1,15 @@
 <script setup lang='ts'>
 
 const data = reactive({})
-
 onMounted(() => {
-
+    
 })
 </script>
 
 <template>
-  <div>
-    testSon - page
-  </div>
+    <div> 
+      I'm header!
+    </div>
 </template>
 
 <style scoped lang='less'></style>

@@ -1,8 +1,5 @@
 <script setup lang='ts'>
 
-definePageMeta({
-    layout: 'layout-a'
-})
 const { data } = await useFetch('/api/test')
 const message = data.value?.message
 const title = ref('首页')
@@ -19,18 +16,7 @@ onMounted(() => {
 
 <template>
     <div>
-        <div>
-            11
-            <p>请求api数据结果：{{ message }}</p>
-            <nuxt-link to="/test">
-                <el-button>
-                    去test页
-                </el-button>
-            </nuxt-link>
-        </div>
-        <div>
-            
-        </div>
+        content
     </div>
 </template>
 
