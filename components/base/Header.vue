@@ -10,8 +10,8 @@ const handleAnchorClick = () => {
 </script>
 
 <template>
-    <div class="sticky top-0 bg-white">
-        <div class="flex items-center justify-between px-2 py-2 max-w-7xl mx-auto md:px-6">
+    <div class="sticky top-0 bg-[#fafafa] border-b md:border-b-0 z-50">
+        <div class="flex items-center justify-between px-3 md:px-6 py-4 md:py-2 max-w-7xl mx-auto ">
             <p class="flex gap-2 md:flex-1">
                 <strong class="text-xl text-[#18181B]">YC's Blog</strong>
                 <el-tag type="primary" color="#eef2ff">Landing</el-tag>
@@ -35,7 +35,7 @@ const handleAnchorClick = () => {
             </div>
             <div class="px-6 pt-1 md:hidden">
                 <client-only>
-                    <el-drawer v-model="drawer" size="250" direction="rtl" :lock-scroll="false">
+                    <el-drawer v-model="drawer" size="250" direction="rtl">
                         <el-anchor :offset="70" @click="handleAnchorClick">
                             <el-anchor-link href="#Features">
                                 Features

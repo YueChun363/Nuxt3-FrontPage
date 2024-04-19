@@ -8,7 +8,7 @@ onMounted(() => {
 
 <template>
     <div>
-        <div class="flex items-center justify-between px-2 py-2 max-w-7xl mx-auto md:px-6">
+        <div class="flex items-center justify-between px-2 py-20 max-w-7xl mx-auto md:px-6">
             <p class="text-sm text-gray-500 md:text-md">
                 Copyright © 2024. All rights reserved.
             </p>
