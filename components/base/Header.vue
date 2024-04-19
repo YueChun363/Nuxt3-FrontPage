@@ -16,7 +16,7 @@ const handleAnchorClick = () => {
                 <strong class="text-xl text-[#18181B]">YC's Blog</strong>
                 <el-tag type="primary" color="#eef2ff">Landing</el-tag>
             </p>
-            <div v-if="!drawer" class="border-2 rounded-full px-6 pt-1 hidden md:block">
+            <div class="border-2 rounded-full px-6 pt-1 hidden md:block">
                 <el-anchor :offset="70" direction="horizontal">
                     <el-anchor-link href="#Features">
                         Features
@@ -33,9 +33,9 @@ const handleAnchorClick = () => {
                 </el-anchor>
 
             </div>
-            <div v-else class="px-6 pt-1 md:hidden">
+            <div class="px-6 pt-1 md:hidden">
                 <client-only>
-                    <el-drawer v-model="drawer" size="100%" direction="rtl">
+                    <el-drawer v-model="drawer" size="250" direction="rtl" :lock-scroll="false">
                         <el-anchor :offset="70" @click="handleAnchorClick">
                             <el-anchor-link href="#Features">
                                 Features
