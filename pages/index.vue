@@ -1,4 +1,5 @@
 <script setup lang='ts'>
+import avatar from '~/assets/imgs/1.png'
 
 const { data } = await useFetch('/api/test')
 const message = data.value?.message
@@ -30,6 +31,44 @@ const moneyList = ref([
     },
     {
         label: '7 GB Storage'
+    },
+])
+const TestimonialsList = ref([
+    {
+        name: 'Rose Roberson',
+        position: 'CEO at Company',
+        description: 'Nostrud tempor sunt fugiat. Dolor in sint dolore labore non occaecat adipisicing Lorem labore ullamco enim excepteur. In fugiat Lorem sit velit id veniam esse eiusmod non ea voluptate cupidatat reprehenderit ullamco dolore. Mollit laborum occaecat aliquip.',
+        avatar: avatar
+    },
+    {
+        name: 'Chace Rodgers',
+        position: 'CEO at Company',
+        description: 'Eiusmod dolor aute ut nulla pariatur officia consequat aute amet exercitation.',
+        avatar: avatar
+    },
+    {
+        name: 'Cornelius Sheppard',
+        position: 'CEO at Company',
+        description: 'Id duis velit enim officia ad nisi incididunt magna ex dolor minim deserunt dolor. Esse incididunt cillum nostrud esse do quis amet labore amet nulla eiusmod amet nulla Lorem. Incididunt ex voluptate irure officia laboris ea proident est qui.',
+        avatar: avatar
+    },
+    {
+        name: 'Destinee Woods',
+        position: 'CEO at Company',
+        description: 'Velit consectetur in adipisicing culpa eiusmod commodo eu ex dolore. Officia irure nisi dolor dolore velit fugiat. Aliqua sint aliqua aute elit eu sunt.',
+        avatar: avatar
+    },
+    {
+        name: 'Kaleb Mccormick',
+        position: 'CEO at Company',
+        description: 'Proident quis deserunt qui ex exercitation veniam id Lorem est cupidatat ipsum irure aliquip ad.',
+        avatar: avatar
+    },
+    {
+        name: 'Jazmin Mccall',
+        position: 'CEO at Company',
+        description: 'Magna officia quis ea ea in officia non voluptate ipsum culpa do labore sunt. Aute est dolore commodo sint officia ad laboris dolor magna aliquip exercitation tempor commodo.',
+        avatar: avatar
     },
 ])
 onMounted(() => {
@@ -219,6 +258,26 @@ onMounted(() => {
                                     </el-icon>
                                 </div>
                                 <p class="text-gray-600 text-sm">{{ item.label }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-24 md:mt-60">
+                <h3 class="text-[#6366f1] font-bold">Testimonials</h3>
+                <h1 class="text-3xl md:text-5xl fotn-black mt-2">What our customers are saying.</h1>
+                <p class="mt-6 text-lg/8 text-gray-600">Proident sunt exercitation minim laborum enim laboris labore
+                    esse.</p>
+                <div class="grid grid-cols-4 auto-cols-auto gap-6 mt-24 text-left">
+                    <div class="p-8 border rounded-xl bg-white shadow-sm" v-for="(item, index) in TestimonialsList" :key="index">
+                        <p class="text-gray-600">
+                            {{item.description}}
+                        </p>
+                        <div class="flex items-center gap-3 mt-6">
+                            <el-avatar class="w-8 h-8" :src="item.avatar" alt="头像" />
+                            <div>
+                                <h3>{{ item.name }}</h3>
+                                <p>{{ item.position }}</p>
                             </div>
                         </div>
                     </div>
