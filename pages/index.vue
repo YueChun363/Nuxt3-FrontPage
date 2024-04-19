@@ -9,6 +9,29 @@ useSeoMeta({
     ogTitle: '首页',
     ogDescription: '首页描述',
 })
+const moneyList = ref([
+    {
+        label: '1 GB Storage'
+    },
+    {
+        label: '2 GB Storage'
+    },
+    {
+        label: '3 GB Storage'
+    },
+    {
+        label: '4 GB Storage'
+    },
+    {
+        label: '5 GB Storage'
+    },
+    {
+        label: '6 GB Storage'
+    },
+    {
+        label: '7 GB Storage'
+    },
+])
 onMounted(() => {
 
 })
@@ -144,8 +167,61 @@ onMounted(() => {
                 <h1 class="text-3xl md:text-5xl fotn-black mt-2">The money I need</h1>
                 <p class="mt-6 text-lg/8 text-gray-600">Pariatur laborum dolor ea commodo sit aute aliquip qui et cillum
                     excepteur.</p>
-                <div>
-
+                <div class="flex flex-col mt-24 lg:grid lg:grid-cols-3 text-left gap-x-3 gap-y-8">
+                    <div class="p-8 border rounded-xl bg-white shadow-sm">
+                        <h1 class="text-2xl font-bold">Basic</h1>
+                        <p class="mt-3 text-gray-600">A basic plan for individuals.</p>
+                        <h1 class="mt-6 text-2xl font-bold">$9.99</h1>
+                        <div
+                            class="border rounded-full text-center bg-gray-50 hover:bg-gray-100 py-2 text-gray-600 text-sm mt-6 cursor-pointer">
+                            Get Started</div>
+                        <div class="mt-4">
+                            <div class="flex items-center gap-3 py-2" v-for="(item, index) in moneyList" :key=index>
+                                <div class="w-4 h-4 text-center leading-4 rounded-full bg-black text-white font-bold">
+                                    <el-icon size="12">
+                                        <el-icon-check />
+                                    </el-icon>
+                                </div>
+                                <p class="text-gray-600 text-sm">{{ item.label }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8 border-2 border-black rounded-xl bg-white shadow-sm lg:scale-110">
+                        <h1 class="text-4xl font-bold">Standard</h1>
+                        <p class="mt-3 text-gray-600">A standard plan for small teams.</p>
+                        <h1 class="mt-6 text-4xl font-bold">$19.99</h1>
+                        <div
+                            class="border rounded-full text-center bg-slate-950 hover:bg-slate-900 py-2 text-white text-md mt-6 cursor-pointer">
+                            Get Started</div>
+                        <div class="mt-4">
+                            <div class="flex items-center gap-3 py-2" v-for="(item, index) in moneyList" :key=index>
+                                <div class="w-4 h-4 text-center leading-4 rounded-full bg-black text-white font-bold">
+                                    <el-icon size="12">
+                                        <el-icon-check />
+                                    </el-icon>
+                                </div>
+                                <p class="text-gray-600 text-sm">{{ item.label }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8 border rounded-xl bg-white shadow-sm">
+                        <h1 class="text-2xl font-bold">Premium</h1>
+                        <p class="mt-3 text-gray-600">A premium plan for large teams.</p>
+                        <h1 class="mt-6 text-2xl font-bold">$29.99</h1>
+                        <div
+                            class="border rounded-full text-center bg-gray-50 hover:bg-gray-100 py-2 text-gray-600 text-sm mt-6 cursor-pointer">
+                            Get Started</div>
+                        <div class="mt-4">
+                            <div class="flex items-center gap-3 py-2" v-for="(item, index) in moneyList" :key=index>
+                                <div class="w-4 h-4 text-center leading-4 rounded-full bg-black text-white font-bold">
+                                    <el-icon size="12">
+                                        <el-icon-check />
+                                    </el-icon>
+                                </div>
+                                <p class="text-gray-600 text-sm">{{ item.label }}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="Features" class="bg-[#ec4899] h-8">0</div>
