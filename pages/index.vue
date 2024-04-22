@@ -71,6 +71,15 @@ const TestimonialsList = ref([
         avatar: avatar
     },
 ])
+const { width } = useWindowSize();
+const rightAndBottom = computed(() => {
+    console.log('log------------ width', width.value);
+    if (width.value <= 640) {
+        return 50
+    } else {
+        return 100
+    }
+})
 onMounted(() => {
 
 })
@@ -138,9 +147,9 @@ onMounted(() => {
                     </el-icon>
                 </div>
             </div>
-            <div class="text-center mt-24 md:mt-60">
+            <div id="Features" class="text-center mt-24 md:mt-60">
                 <h3 class="text-[#6366f1] font-bold">Features</h3>
-                <h1 class="text-3xl md:text-5xl fotn-black mt-2">Why choose me huh?</h1>
+                <h1 class="text-3xl md:text-5xl font-black mt-2">Why choose me huh?</h1>
                 <p class="mt-6 text-lg/8 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore
                     et dolore magna aliqua.</p>
@@ -201,9 +210,9 @@ onMounted(() => {
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-24 md:mt-60">
+            <div id="Pricing" class="text-center mt-24 md:mt-60">
                 <h3 class="text-[#6366f1] font-bold">Pricing</h3>
-                <h1 class="text-3xl md:text-5xl fotn-black mt-2">The money I need</h1>
+                <h1 class="text-3xl md:text-5xl font-black mt-2">The money I need</h1>
                 <p class="mt-6 text-lg/8 text-gray-600">Pariatur laborum dolor ea commodo sit aute aliquip qui et cillum
                     excepteur.</p>
                 <div class="flex flex-col mt-24 lg:grid lg:grid-cols-3 text-left gap-x-3 gap-y-8">
@@ -263,15 +272,16 @@ onMounted(() => {
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-24 md:mt-60">
+            <div id="Testimonials" class="text-center mt-24 md:mt-60">
                 <h3 class="text-[#6366f1] font-bold">Testimonials</h3>
-                <h1 class="text-3xl md:text-5xl fotn-black mt-2">What our customers are saying.</h1>
+                <h1 class="text-3xl md:text-5xl font-black mt-2">What our customers are saying.</h1>
                 <p class="mt-6 text-lg/8 text-gray-600">Proident sunt exercitation minim laborum enim laboris labore
                     esse.</p>
-                <div class="grid grid-cols-4 auto-cols-auto gap-6 mt-24 text-left">
-                    <div class="p-8 border rounded-xl bg-white shadow-sm" v-for="(item, index) in TestimonialsList" :key="index">
+                <div class="columns-1 md:columns-2 lg:columns-3  xl:columns-4 gap-8 space-y-8 mt-14 md:mt-24 text-left">
+                    <div class="break-inside-avoid p-6 border rounded-xl bg-white shadow-sm"
+                        v-for="(item, index) in TestimonialsList" :key="index">
                         <p class="text-gray-600">
-                            {{item.description}}
+                            {{ item.description }}
                         </p>
                         <div class="flex items-center gap-3 mt-6">
                             <el-avatar class="w-8 h-8" :src="item.avatar" alt="头像" />
@@ -283,47 +293,88 @@ onMounted(() => {
                     </div>
                 </div>
             </div>
-            <div id="Features" class="bg-[#ec4899] h-8">0</div>
-            <div class="h-8">1</div>
-            <div class="h-8">2</div>
-            <div class="h-8">3</div>
-            <div class="h-8">4</div>
-            <div class="h-8">5</div>
-            <div class="h-8">6</div>
-            <div class="h-8">7</div>
-            <div class="h-8">8</div>
-            <div class="h-8">9</div>
-            <div id="Pricing" class="bg-[#ec4899] h-8">10</div>
-            <div class=" h-8">11</div>
-            <div class=" h-8">12</div>
-            <div class=" h-8">13</div>
-            <div class=" h-8">14</div>
-            <div class=" h-8">15</div>
-            <div class=" h-8">16</div>
-            <div class=" h-8">17</div>
-            <div class=" h-8">18</div>
-            <div class=" h-8">19</div>
-            <div class=" h-8">20</div>
-            <div id="Testimonials" class="bg-[#ec4899] h-8">21</div>
-            <div class="h-8">22</div>
-            <div class="h-8">23</div>
-            <div class="h-8">24</div>
-            <div class="h-8">25</div>
-            <div class="h-8">26</div>
-            <div class="h-8">29</div>
-            <div class="h-8">29</div>
-            <div class="h-8">29</div>
-            <div class="h-8">29</div>
-            <div class="h-8">29</div>
-            <div class="h-8">29</div>
-            <div id="FAQ" class="bg-[#ec4899] h-8">29</div>
-            <div class="h-8">29</div>
-            <div class="h-8">29</div>
-            <div class="h-8">29</div>
-            <div class="h-8">29</div>
-            <div class="h-8">29</div>
         </div>
+        <div class="text-center bg-green-100 mt-8 py-40 md:py-72 bg md:mt-32">
+            <h1 class="text-3xl md:text-4xl font-black mt-2">Get started today</h1>
+            <p class="mt-6 text-lg/8 text-gray-600">Nisi mollit id aliquip sunt est laborum sit.</p>
+            <div class="flex justify-center items-center mt-8">
+                <div
+                    class="rounded-full text-center bg-slate-950 hover:bg-slate-900 py-2 text-white text-md mt-6 cursor-pointer p-4">
+                    Get Started</div>
+            </div>
+        </div>
+        <div class="px-2 py-2 max-w-7xl mx-auto md:px-6">
+            <div id="FAQ" class="text-center my-24 md:mt-40">
+                <h1 class="text-3xl md:text-4xl font-black mt-2">Frequently asked questions</h1>
+                <p class="mt-6 text-lg/8 text-gray-600">Culpa consectetur dolor pariatur commodo aliqua amet tempor nisi
+                    enim deserunt elit cillum.</p>
+                <div class="mt-20 md:mt-32 text-left mx-4 xl:mx-32 my-collapse">
+                    <el-collapse>
+                        <el-collapse-item title="Consistency" name="1">
+                            <div>
+                                Consistent with real life: in line with the process and logic of real
+                                life, and comply with languages and habits that the users are used to;
+                            </div>
+                            <div>
+                                Consistent within interface: all elements should be consistent, such
+                                as: design style, icons and texts, position of elements, etc.
+                            </div>
+                        </el-collapse-item>
+                        <el-collapse-item title="Feedback" name="2">
+                            <div>
+                                Operation feedback: enable the users to clearly perceive their
+                                operations by style updates and interactive effects;
+                            </div>
+                            <div>
+                                Visual feedback: reflect current state by updating or rearranging
+                                elements of the page.
+                            </div>
+                        </el-collapse-item>
+                        <el-collapse-item title="Efficiency" name="3">
+                            <div>
+                                Simplify the process: keep operating process simple and intuitive;
+                            </div>
+                            <div>
+                                Definite and clear: enunciate your intentions clearly so that the
+                                users can quickly understand and make decisions;
+                            </div>
+                            <div>
+                                Easy to identify: the interface should be straightforward, which helps
+                                the users to identify and frees them from memorizing and recalling.
+                            </div>
+                        </el-collapse-item>
+                        <el-collapse-item title="Controllability" name="4">
+                            <div>
+                                Decision making: giving advices about operations is acceptable, but do
+                                not make decisions for the users;
+                            </div>
+                            <div>
+                                Controlled consequences: users should be granted the freedom to
+                                operate, including canceling, aborting or terminating current
+                                operation.
+                            </div>
+                        </el-collapse-item>
+                    </el-collapse>
+                </div>
+            </div>
+        </div>
+        <el-backtop :right="rightAndBottom" :bottom="rightAndBottom" />
     </div>
 </template>
 
-<style scoped lang='less'></style>
+<style lang='less'>
+.my-collapse {
+    .el-collapse {
+        border: none;
+    }
+
+    .el-collapse-item__header {
+        font-size: 18px;
+        background: transparent;
+    }
+
+    .el-collapse-item__wrap {
+        background: transparent;
+    }
+}
+</style>

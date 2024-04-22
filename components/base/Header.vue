@@ -55,7 +55,7 @@ const handleAnchorClick = () => {
             </div>
             <div class="flex justify-end cursor-pointer md:flex-1 ">
                 <div class="inline-block text-2xl  md:hidden">
-                    <el-icon @click="drawer = !drawer">
+                    <el-icon @click="drawer = true">
                         <el-icon-operation />
                     </el-icon>
                 </div>
